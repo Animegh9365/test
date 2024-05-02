@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <h1 >Welcome to the Sorting numbers page</h1>
+    <br>
+    <br>
+    <h3>Bubble Sort</h3>
+    <form th:action="@{/sort}" th:object = ${numberForm} method="post">
+        <label for="">Numbers (comma-seperated)</label>
+        <input type="text" th:field = "*{numbers}"/>
+        <button type="submit">Sort</button>
+    </form>
+</body>
+</html>
